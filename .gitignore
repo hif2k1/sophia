@@ -1,0 +1,9 @@
+tests/
+content/texts/*.*
+build/
+config-custom.js
+app/content/
+!app/content/texts/README.md
+**/node_modules/
+!**/node_modules/*.js
+.idea
