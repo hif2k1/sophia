@@ -5,7 +5,7 @@ var AboutScreen = function(node) {
 		body = $(document.body),
 		win = $(window),
 
-		aboutButton = $('<div class="main-menu-item image-about"><svg class="icon"><use xlink:href="build/icons.svg#about-icon"></use></svg><div class="i18n" data-i18n="[html]menu.labels.about"></div></div>')
+		aboutButton = $('<div class="main-menu-item image-about"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#about-icon"></use></svg><div class="i18n" data-i18n="[html]menu.labels.about"></div></div>')
 					.appendTo( $('#main-menu-features') )
 					.on('click', aboutClick),
 

@@ -31,7 +31,7 @@ var ConfigToggles = function(node) {
 			toggleSetting = AppSettings.getValue(toggleId, toggleDefaultSetting),
 			toggle = $('<div id="config-toggle-' + toggleId + '" class="config-toggle">' +
 						'<input id="config-toggle-' + toggleId + '-input" type="checkbox" value="' + toggleId + '" />' +
-						'<label for="config-toggle-' + toggleId + '-input" title="' + toggleName + '"><svg class="icon"><use xlink:href="build/icons.svg#' + toggleId + '-toggle"></use></svg>' + toggleName + '</label>' +
+						'<label for="config-toggle-' + toggleId + '-input" title="' + toggleName + '"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#' + toggleId + '-toggle"></use></svg>' + toggleName + '</label>' +
 					'</div>')
 						.appendTo(body);
 

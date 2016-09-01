@@ -91,7 +91,7 @@ var MediaLibraryPlugin = function(app) {
 				case 'externalvideo':
 					var mediaInfo = mediaForVerse[0],
 						videoUrl = mediaInfo.filename;
-
+                    console.log("triggered: external video");
 					sofia.globals.showVideo(videoUrl, mediaInfo.name);
 
 					break;
@@ -156,7 +156,7 @@ var MediaLibraryPlugin = function(app) {
 							// check if it's already been added
 							//if (verse.closest('.chapter').find('.' + verseid).find('.' + iconClassName).length == 0) {
 
-								var icon = $('<span class="icon ' + iconClassName + ' mediathumb" data-mediafolder="' + mediaLibrary.folder + '"><svg class="icon"><use xlink:href="build/icons.svg#' + iconClassName + '"></use></svg></span>'),
+								var icon = $('<span class="icon ' + iconClassName + ' mediathumb" data-mediafolder="' + mediaLibrary.folder + '"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#' + iconClassName + '"></use></svg></span>'),
 									verseNumber = verse.find('.verse-num, v-num');
 
 								if (verseNumber.length > 0) {

@@ -10,11 +10,13 @@
 	<meta name="viewport" content="maximum-scale=1.0">
 	<meta name="viewport" content="user-scalable=no">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="/app/build/app.css?v=4.0.1" />
+	<link rel="stylesheet" href="build/app.css?v=4.0.1" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="/app/build/app.js?v=4.0.1"></script>
+	<script src="build/app.js?v=4.0.1"></script>
 	<script>
 		sofia.config = $.extend(sofia.config, {
+			siteTitle: "Sophia!",
+			icons: 'build/icons.svg',
 			settingsPrefix: '20160425',
 			// first load
 			windows: [
@@ -22,16 +24,15 @@
 				{type: 'bible', data: {textid: 'ENGNAS', fragmentid: 'JN3_16'}}
 			],
 
-			//siteTitle: "Sophia!",
 			enableBibleSelectorTabs: false,
 			textsIndexPath: 'dbs_texts.json',
 			baseContentUrl: 'http://inscript.bible.cloud/',
-			baseAPIUrl: 'http://api.bible.cloud/api',
+			baseAPIUrl: 'http://api.bible.cloud/api/',
 			serverSearchPath: 'http://api.bible.cloud/api/bible/study/search/',
 			absUrl: 'http://api.bible.cloud/api/bible/partners/abs/',
 			enableOnlineSources: true,
 			enableFeedback: true,
-			feedbackUrl: 'http://biblecloud.dev/',
+			feedbackUrl: 'http://api.bible.cloud/feedback/',
 
 			newCommentaryWindowTextId: "comm_eng_tske",
 			fcbhKey: '111a125057abd2f8931f6d6ad9f2921f',
@@ -54,9 +55,6 @@
 	</style>
 </head>
 <body>
-
- <script>$( document ).ready(function() {$( "#app-logo" ).wrapInner( '<a class="title" href="//bible.cloud/">せいしょがく</a>' ); });</script>
-
 
 	<div id="startup">
 		<h1>Browser Bible</h1>

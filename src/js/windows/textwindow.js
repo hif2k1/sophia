@@ -22,8 +22,8 @@ var TextWindow = function(id, parent, init_data, text_type) {
 						//(Detection.hasTouch ? '<span class="header-input text-nav" ></span>' : '<input type="text" class="header-input text-nav" />') +
 						'<input type="text" class="app-input text-nav" />' +
 						'<div class="app-list text-list"></div>'+
-						'<span class="header-icon info-button"><svg class="icon"><use xlink:href="build/icons.svg#about-icon"></use></svg></span>'+
-						'<span class="header-icon audio-button"><svg class="icon"><use xlink:href="build/icons.svg#audio-icon"></use></svg></span>'+
+						'<span class="header-icon info-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#about-icon"></use></svg></span>'+
+						'<span class="header-icon audio-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#audio-icon"></use></svg></span>'+
 					'</div>'+
 				'</div>'+
 				'<div class="scroller-flipper">' +
@@ -266,7 +266,7 @@ var TextWindow = function(id, parent, init_data, text_type) {
 		navui.html('Reference').val('Reference');
 		textlistui.html('Version');
 
-		console.log('textsindow init', init_data, isInitialized, text_type);
+		// console.log('textsindow init', init_data, isInitialized, text_type);
 
 		if (init_data == null) {
 			return;

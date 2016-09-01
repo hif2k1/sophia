@@ -129,7 +129,7 @@ var Eng2pPlugin = function(node) {
 '</table>' +
 			'</div>')
 			.appendTo( engWindow.body ),
-			button = $('<div class="config-button" id="config-eng2p-button"><svg class="icon"><use xlink:href="build/icons.svg#eng2p-button"></use></svg><span class="i18n" data-i18n="[html]plugins.eng2p.title"></span></div>')
+			button = $('<div class="config-button" id="config-eng2p-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#eng2p-button"></use></svg><span class="i18n" data-i18n="[html]plugins.eng2p.title"></span></div>')
 						.appendTo( $('#config-tools .config-body') );
 
 

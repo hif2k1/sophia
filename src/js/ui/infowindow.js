@@ -1,6 +1,6 @@
 var InfoWindow = function(id) {
 	var container = $(	'<div class="info-window"' + (id ? ' id="' + id + '"' : '') + '>'+
-							'<span class="close-button"><svg class="icon"><use xlink:href="build/icons.svg#close-button"></use></svg></span>' +
+							'<span class="close-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#close-button"></use></svg></span>' +
 							'<div class="info-body"></div>' +
 						'</div>')
 							.appendTo( $(document.body) )

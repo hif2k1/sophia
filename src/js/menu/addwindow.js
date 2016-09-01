@@ -50,7 +50,7 @@ var AddWindowButton = function(node) {
 	for (var x in windowTools) {
 		var tool = windowTools[x];
 		// ADD Button
-		var addButton = $('<div class="window-add main-menu-item" id="add-' + tool.type + '"><svg class="icon"><use xlink:href="build/icons.svg#' + tool.label + '-icon"></use></svg><div class="i18n" data-i18n="[html]windows.' + tool.label + '.label"></div></div>')
+		var addButton = $('<div class="window-add main-menu-item" id="add-' + tool.type + '"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#' + tool.label + '-icon"></use></svg><div class="i18n" data-i18n="[html]windows.' + tool.label + '.label"></div></div>')
 					.appendTo(buttonMenu)
 					.data('init', tool);
 	}

@@ -6,6 +6,8 @@ sofia.config = {
 	// Enables the use of online sources (Google Maps, FCBH, Jesus Film, etc.)
 	enableOnlineSources: true,
 
+    icons: 'build/icons.svg',
+
 	// first load
 	windows: [
 		{type: 'bible', data: {textid: 'eng_kjv', fragmentid: 'JN1_1'}},
@@ -35,9 +37,6 @@ sofia.config = {
 	// (1) Leave blank for JSON search
 	// (2) Enter path of script that will return JSON data
 	serverSearchPath: '',
-
-	// texts shown before the "MORE" button ("eng-NASB1995", "eng-kjv", "eng_net")
-	topTexts: [],
 
 	// new window
 	newBibleWindowVersion: 'eng_kjv',

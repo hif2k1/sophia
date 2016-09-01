@@ -20,7 +20,7 @@ var Feedback = function(node) {
 		body = $(document.body),
 		win = $(window),
 
-		feedbackButton = $('<div class="main-menu-item feedback-logo"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="build/icons.svg#feedback"></use></svg> <div class="i18n" data-i18n="[html]menu.labels.feedback">Feedback</div></div>')
+		feedbackButton = $('<div class="main-menu-item feedback-logo"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#feedback"></use></svg> <div class="i18n" data-i18n="[html]menu.labels.feedback">Feedback</div></div>')
 					.appendTo( $('#main-menu-features') )
 					.on('click', clickFeedback),
 

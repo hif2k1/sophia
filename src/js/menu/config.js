@@ -6,7 +6,7 @@ var ConfigButton = function(node) {
 		body = $(document.body),
 		win = $(window),
 
-		configButton = $('<div class="main-menu-item image-config"><svg class="icon"><use xlink:href="build/icons.svg#settings-button"></use></svg><div class="i18n" data-i18n="[html]menu.labels.settings"></div></div>')
+		configButton = $('<div class="main-menu-item image-config"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#settings-button"></use></svg><div class="i18n" data-i18n="[html]menu.labels.settings"></div></div>')
 					.appendTo( $('#main-menu-features') )
 					.on('click', buttonClick),
 

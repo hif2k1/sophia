@@ -11,7 +11,7 @@ var FullScreenButton = function(node) {
 		el = document.body,
 		// fullscreenButton = $('<div id="main-fullscreen-button" class="main-menu-item">Fullscreen</div>')
 		// .appendTo( $('#main-menu-features') )
-		fullscreenButton = $('<div id="main-fullscreen-button"><svg class="icon"><use xlink:href="build/icons.svg#fullscreen"></use></svg></div>')
+		fullscreenButton = $('<div id="main-fullscreen-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#fullscreen"></use></svg></div>')
 			.appendTo( $('.windows-header') )
 			.on('click', toggleFullscreen),
 

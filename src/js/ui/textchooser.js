@@ -26,9 +26,9 @@ var TextChooser = function() {
 							'<span class="up-arrow-border"></span>' +
 							'<div class="text-chooser-header">' +
 								'<div class="text-chooser-selector">' +
-									'<div class="text-chooser-default selected" data-mode="default"><svg class="icon"><use xlink:href="build/icons.svg#book"></use></svg><span class="i18n" data-i18n="[html]windows.bible.default"></span></div>' +
-									'<div class="text-chooser-languages" data-mode="languages"><svg class="icon"><use xlink:href="build/icons.svg#language"></use></svg><span class="i18n" data-i18n="[html]windows.bible.languages"></span></div>' +
-									'<div class="text-chooser-countries" data-mode="countries"><svg class="icon"><use xlink:href="build/icons.svg#earth"></use></svg><span class="i18n" data-i18n="[html]windows.bible.countries"></span></div>' +
+									'<div class="text-chooser-default selected" data-mode="default"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#book"></use></svg><span class="i18n" data-i18n="[html]windows.bible.default"></span></div>' +
+									'<div class="text-chooser-languages" data-mode="languages"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#language"></use></svg><span class="i18n" data-i18n="[html]windows.bible.languages"></span></div>' +
+									'<div class="text-chooser-countries" data-mode="countries"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#earth"></use></svg><span class="i18n" data-i18n="[html]windows.bible.countries"></span></div>' +
 								'</div>' +
 								'<input type="text" class="text-chooser-filter-text i18n" data-i18n="[placeholder]windows.bible.filter" />' +
 								'<span class="close-button">Close</span>' +
@@ -230,11 +230,6 @@ var TextChooser = function() {
 		if (recentlyUsed.recent.length > 0) {
 
 			var isDefaultText = false;
-
-			// find if this should be a priority text shown at the beginning
-			//if (sofia.config.topTexts && sofia.config.topTexts.length > 0) {
-			//	isDefaultText = true;
-			//}
 
 			var recentlyUsedHtml =
 					createHeaderRow(
@@ -492,7 +487,7 @@ var TextChooser = function() {
 				if (textsInCountry.length > 0) {
 					html.push(
 						createHeaderRow(countryInfo["alpha-3"],
-							'<svg class="icon flag"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="build/icons.svg#' + countryInfo["alpha-2"].toUpperCase() + '"></use></svg>' + countryInfo.name,
+							'<svg class="icon flag"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#' + countryInfo["alpha-2"].toUpperCase() + '"></use></svg>' + countryInfo.name,
 							'',
 							'',
 							'country collapsed')
@@ -660,9 +655,9 @@ var TextChooser = function() {
 						'<span>' + text.name + '</span>' +
 					'</td>' +
 
-					(hasLemma === true ? '<td class="text-chooser-lemma"><svg title="' + i18n.t('windows.bible.lemma') + '" class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="build/icons.svg#lemma"></use></svg></td>' : '') +
-					(hasAudio === true ? '<td class="text-chooser-audio"><svg title="' + i18n.t('windows.bible.audio') + '" class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="build/icons.svg#AudioWindow-button"></use></svg></td>' : '') +
-					(providerName != '' ? '<td class="text-chooser-provider"><svg title="' + providerFullName + '" class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="build/icons.svg#provider-'+ providerName +'"></use></svg></td>' : '') +
+					(hasLemma === true ? '<td class="text-chooser-lemma"><svg title="' + i18n.t('windows.bible.lemma') + '" class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#lemma"></use></svg></td>' : '') +
+					(hasAudio === true ? '<td class="text-chooser-audio"><svg title="' + i18n.t('windows.bible.audio') + '" class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#AudioWindow-button"></use></svg></td>' : '') +
+					(providerName != '' ? '<td class="text-chooser-provider"><svg title="' + providerFullName + '" class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#provider-'+ providerName +'"></use></svg></td>' : '') +
 				'</tr>';
 
 		return html;

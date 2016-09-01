@@ -9,7 +9,7 @@ var MainSearchBox = function(node) {
 							//'<input type="search" placeholder="' + i18n.t('menu.search.placeholder') + '" id="main-search-input" />' +
 							'<input type="search" class="i18n" data-i18n="[placeholder]menu.search.placeholder" id="main-search-input" />' +
 
-							'<div type="button" id="main-search-button"><svg class="icon"><use xlink:href="build/icons.svg#search"></use></svg></div>' +
+							'<div type="button" id="main-search-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#search"></use></svg></div>' +
 					'</div>')
 						.appendTo(node),
 

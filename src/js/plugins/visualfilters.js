@@ -103,7 +103,7 @@ var VisualFilters = function(node) {
 										tbody.append(row);
 									}),
 
-		openVisualizationsButton = $('<div class="config-button" id="config-visualfilters-button"><svg class="icon"><use xlink:href="build/icons.svg#visualfilters-button"></use></svg><span class="i18n" data-i18n="[html]plugins.visualfilters.button"></span></div>')
+		openVisualizationsButton = $('<div class="config-button" id="config-visualfilters-button"><svg class="icon"><use xlink:href="' + sofia.config.icons + '#visualfilters-button"></use></svg><span class="i18n" data-i18n="[html]plugins.visualfilters.button"></span></div>')
 						.appendTo( $('#config-tools .config-body') );
 
 	//console.log('LOADED VIZ',visualSettings);

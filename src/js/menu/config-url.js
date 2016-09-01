@@ -16,7 +16,7 @@ var ConfigUrl = function(node) {
 		urlBox =
 				$('<div id="config-global-url">' +
 						//'<span class="config-header">URL</span>' +
-						'<span data-clipboard-action="copy" data-clipboard-target="#config-global-url-input"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="build/icons.svg#link"></use></svg></span>' +
+						'<span data-clipboard-action="copy" data-clipboard-target="#config-global-url-input"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#link"></use></svg></span>' +
 						'<input type="text" id="config-global-url-input" />' +
 						//'<div ></div>' +
 					'</div>'),
