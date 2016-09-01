@@ -3,89 +3,174 @@
 The object where all the configuration logic happens is sofia.config.
 There's an example file in the [/src/js/core/config-default.js](/src/js/core/config-default.js).
 
-Currently there are a # of configuration options.
+Currently there are a number of configuration options that are customizable.
 
 - **enableOnlineSources**
-	- type: *Boolean*
-	- purpose: A quick way to disable all online interactions. Useful if you're working on an offline app that will be delivered where online connectivity could pose a potential hazard to the user.
-- **settingsPrefix**
-	- type: *String*
-	- purpose: Cache Busting
-- **windows**
-	- type: *Array*
-	- purpose: windows opened on first load
-	- example:
+	- Type: *Boolean*  (true or false)
+	- Purpose: A quick way to disable all online interactions. Useful if you're working on an offline app that will be delivered where online connectivity could pose a potential hazard to the user.
+```	
+	- Example:  enableOnlineSources: true,
+```
+
+- **bibleSelectorDefaultList**
+	- Type: *Array* 
+	- Purpose: The Bibles that appear in the main "Bible Picker" can be specified with this switch. Each Bible has a unique ID that can be easily identified by using the copy link feature inside the Options menu.
+
+	- Example:
 	```
+	 bibleSelectorDefaultList: [
+                    "ARZVDV","CHNCU1","CHNNCS","CHNCUV","CHNNCT","ENGESV","ENGNAS","ENGKJV", 
+                    "ENGHCS","ENGNIV","ENGNET","ENGWEB","GRCTIS","HNDWTC","HBOWLC","PORJFA",
+                    "RU1IBS","SPNR60","SPNBLA"],
+```
+
+- **settingsPrefix**
+	- Type: *String* 
+	- Purpose: Many web applications with have components that are stored in a users browser. When changes are made to the setttings or components or an app, the user may need to clear the cache so that they take effect next time they use the app. inScript is no different.  We like to use the date for the last changes in this field.
+	- Example: 
+	```
+   settingsPrefix: '20160815',
+```
+
+- **windows**
+	- Type: *Array*
+	- Purpose: When a user opens inSCript for the first time, several default windows will open. Those can be customized to any of inScripts windows with this switch.
+	- Example: 
+```
 	windows: [
 		{type: 'bible', data: {textid: 'ENGKJV', fragmentid: 'JN1_1'}},
 		{type: 'search', data: {textid: 'ENGKJV', searchtext:'truth love'}}
 	],
-	```
+```	
+
 - **baseContentUrl**
-	- type: *String*
-	- purpose: URL to content. Leave blank to use local content folder. Enter URL for CORS enabled sites
-	- example:
+	- Type: *String*
+	- Purpose: This URL should be pointed to the content folder. It is primarily used for online use. You can leave this switch blank to use local content folder. Enter URL for CORS enabled sites. 
+
+	- Example:
 	```
-	baseContentUrl: 'http://bible.cloud/',
+	baseContentUrl: 'https://inscript.bible.cloud/',
 	```
+
 - **baseContentApiPath**
-	- type: *String*
-	- purpose: Leave blank for local files or for CORS enabled CDN.
-	- example:
+	- Type: *String*
+	- Purpose: Leave blank for local files or for CORS enabled CDN.
+	- Example:
 	```
 	baseContentApiPath: 'http://api.bible.cloud/',
 	```
+
 - **baseContentApiPath**
-	- type: *String*
-	- purpose: if your are creating a CDN for your content and want to send a key
-	- example:
+	- Type: *String*
+	- Purpose: This is a string provided by Digital Bible Society for API uses which may be used when Bible rights are of particular concern.
+	- Example:
 	```
 	baseContentApiKey: 'atr31gar',
 	```
 
-	// file name of texts lists
-	textsIndexPath: 'texts.json',
+- **textsIndexPath**
+	- Type: *String*
+	- Purpose: This switch allows the builder to point to a specific JSON where the Bible information is listed.  It assumes that this JSON list will be found in the CONTENT forlder as specified in the baseContentApiPath switch.
+	- Example:
+	```
+          textsIndexPath: 'dbs_texts.json',
+    ```
+    
+- **aboutPagePath**
+	- Type: *String*
+	- Purpose: This switch allows the builder to specify the name and location of the about page that is pointed to in the settings menu.  If not specified, it assumes that this page is called about.html and is located in the root of the inScript site.
+	- Example:
+	```
+          aboutPagePath: 'dbs_about.html',
+    ```
 
-	// URL to about page
-	aboutPagePath: 'about.html',
+- **serverSearchPath:**
+	- Type: *String*
+	- Purpose: Search happens several ways on inScript pages. And search can also happen locally for offline usage. The search patch can also specifies where the search php or asp files may be found. The switch should be left blank for basic JSON Search.
+	- Example:
+	```
+         serverSearchPath: 'https://api.bible.cloud/api/bible/study/search/',
+    ```
 
-	// (1) Leave blank for JSON search
-	// (2) Enter path of script that will return JSON data
-	serverSearchPath: '',
+- **serverSearchPath:**
+	- Type: *String*
+	- Purpose: Search happens several ways on inScript pages. And search can also happen locally for offline usage. The search patch can also specifies where the search php or asp files may be found. The switch should be left blank for basic JSON Search.
+	- Example:
+	```
+         serverSearchPath: 'https://api.bible.cloud/api/bible/study/search/',
+    ```
 
-	// texts shown before the "MORE" button ("eng-NASB1995", "eng-kjv", "eng_net")
-	topTexts: [],
+- **newBibleWindowVersion:**
+	- Type: *String*
+	- Purpose: The switch is used to specify what Bible opens by default when a user opens a new Bible window.
+	- Example:
+	```
+         newBibleWindowVersion: 'ENGWEB',
+    ```
+	
+- **deafBibleWindowDefaultBibleVersion:**
+	- Type: *String*	
+	When specifying what Deaf Centric Bible should appear, you can specify using this switch.
+	-Example
+	```
+	deafBibleWindowDefaultBibleVersion: 'ASESLS',
+     ```
 
-	// new window
-	newBibleWindowVersion: 'eng_kjv',
+- **newWindowFragmentid:**
+	- Type: *String*
+	- Purpose: The switch is used to specify what verse opens by default when a user opens a new Bible window.
+	- Example:
+	```
+         newWindowFragmentid: 'JN1_1',
+    ```	
 
-	// new bible verse
-	newWindowFragmentid: 'JN1_1',
+- **newCommentaryWindowTextId:**
+	- Type: *String*
+	- Purpose: The switch is used to specify what Commmentary opens by default when a user opens a new Commentary window.
+	- Example:
+	```
+        newCommentaryWindowTextId: 'comm_eng_wesley',
+    ```	
 
-	// new commentary window
-	newCommentaryWindowTextId: 'comm_eng_wesley',
+- **defaultLanguage:**
+	- Type: *String*
+	- Purpose: The switch is used to specify what Language opens by default when a user opens inScript for the first time.
+	- Example:
+	```
+        defaultLanguages: ['Spanish'],
+    ```	
+- **pinnedLanguages:**
+	- Type: *String*
+	- Purpose: The switch is used to specify what Languages appear in the Setting-Language selection menu when a user opens inScript for the first time. When left blank, all languages appear.
+	- Example:
+	```
+        pinnedLanguages: ['English',Spanish'],
+    ```	
 
-	// language for top
-	pinnedLanguage: 'English',
+- **customCssUrl::**
+	- Type: *String*
+	- Purpose: This switch allows for the builder to specify an additional stylesheet to use for some very powerful customization options.
+	- Example:
+	```
+        customCssUrl: '',
+    ```
 
-	// language(s) for top
-	pinnedLanguages: ['English', 'Spanish'],
+- **fcbhLoadVersions:**
+	- Type: *Boolean*
+	- Purpose: This switch set to true will live parse the FCBH optional Bibles and audio, when set to false, it will load and read texts_fcbh.json from the Content directory.
+	- Example:
+	```
+       fcbhLoadVersions: false,
+    ```
 
-	// Override the browser and user's choice for UI language
-	defaultLanguage: '',
+- **API Keys:**
+	- Type: *String*
+	- Purpose: These switches allow the user to imput their own Jesus Film or FCBH API keys. These keys should be optained directly through those orginizations.
+	- Example:
+	```
+	jfmKey: '1234567890'
+	fcbhKey: '123456781',
+    ```
 
-	// URL to custom CSS
-	customCssUrl: '',
 
-	// Faith Comes by Hearing
-	fcbhKey: '',
 
-	// any texts you want to ignore from FCBH
-	fcbhTextExclusions: [''],
-
-	// true: live parse all versions
-	// false: loads texts_fcbh.json
-	fcbhLoadVersions: false,
-
-	// jesus film media
-	jfmKey: ''
