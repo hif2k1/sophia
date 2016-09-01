@@ -155,6 +155,14 @@ Currently there are a number of configuration options that are customizable.
         customCssUrl: '',
     ```
 
+  - **icons:**
+	- Type: *String*
+	- Purpose: This switch allows for the builder to specify where the SVG Icon Skin is located. At the time of writing this needs to remain on the same domain of the site.
+	- Example:
+	```
+        icons: 'build/icons-classic.svg',
+    ```
+
 - **fcbhLoadVersions:**
 	- Type: *Boolean*
 	- Purpose: This switch set to true will live parse the FCBH optional Bibles and audio, when set to false, it will load and read texts_fcbh.json from the Content directory.
