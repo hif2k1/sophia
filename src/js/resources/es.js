@@ -80,7 +80,7 @@ sofia.resources['es'] = {
 				"options": "Opciones de Búsqueda"
 			},
 			"media": {
-				"label": "Medios de comunicación"
+				"label": "Medios"
 			},
 			"notes": {
 				"label": "Notas"

@@ -76,7 +76,7 @@ function javascript() {
 function server(done) {
     browser.init({
         injectChanges: true,
-        proxy: "http://sophia.dev/app/"
+        proxy: "http://sophia.dev/"
     });
     done();
 }

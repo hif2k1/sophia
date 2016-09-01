@@ -1,3 +1,7 @@
+sofia.config = $.extend(sofia.config, {
+	siteTitle: '',
+});
+
 var MainMenu = function(node) {
 
 	// simply create all 'menuComponents' define below
@@ -21,7 +25,7 @@ var MainMenuButton = function(node) {
 		win = $(window),
 
 		container = $('.windows-container'),
-		mainMenuLogo = $('<div id="app-logo"></div>')
+		mainMenuLogo = $('<div id="app-logo">' + sofia.config.siteTitle +'</div>')
 					.appendTo(node),
 		mainMenuButton = $('<div id="main-menu-button">☰</div>')
 					.appendTo(node)

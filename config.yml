@@ -125,6 +125,3 @@ PATHS:
   - "src/js/menu/config-language.js"
   - "src/js/menu/config-toggles.js"
   - "src/js/menu/config-url.js"
-
-  ### You'll want to customize your own config file
-  - "src/js/core/config-custom.js"
