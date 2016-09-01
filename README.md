@@ -14,7 +14,7 @@ npm start
 ## Configuration
 
 Configure options are exposed via the config global.
-For further detail check out the [docs/Configuration.md](Configuration.md) file for details.
+For further detail check out the [Configuration.md](docs/Configuration.md) file for details.
 
 ## Versioning
 
