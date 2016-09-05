@@ -7,5 +7,5 @@ app/content/
 **/node_modules/
 !**/node_modules/*.js
 .idea
-npm-*.log.*
+*.log
 .DS_Store
