@@ -1,4 +1,3 @@
-
 sofia.textproviders['fcbh'] = (function() {
 
 	var text_data = [],
@@ -36,7 +35,7 @@ sofia.textproviders['fcbh'] = (function() {
 
 
 			sofia.ajax({
-				url: sofia.config.baseAPIUrl + 'bible/partners/fcbh/',
+				url: sofia.config.baseAPIUrl + 'bible/partners/fcbh',
 				dataType: 'json',
 				cache: false,
 				success: function(data) {

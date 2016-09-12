@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/digitalbiblesociety/browserbible-3"
   },
-  "author": "John Dyer and John Bitgood",
+  "author": "John Dyer",
   "license": "MIT",
   "scripts": {
     "start": "gulp",
@@ -15,10 +15,8 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.7.2",
-    "babelify": "^7.3.0",
     "browser-sync": "^2.10.0",
-    "browserify": "^13.1.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
     "gulp-cli": "^1.2.1",
@@ -33,7 +31,9 @@
     "gulp-uglify": "^1.2.0",
     "gulp-uncss": "^1.0.1",
     "js-yaml": "^3.4.6",
+    "panini": "^1.3.0",
     "rimraf": "^2.4.3",
+    "style-sherpa": "^1.0.0",
     "yargs": "^3.8.0"
   },
   "babel": {

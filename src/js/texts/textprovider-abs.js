@@ -2,7 +2,7 @@ sofia.config = $.extend(sofia.config, {
 
 	enableAmericanBibleSociety: true,
 
-	absUrl: 'abs.php',
+    baseAPIUrl: '',
 
 	absForceLoadVersions: false,
 
@@ -27,7 +27,7 @@ sofia.textproviders['abs'] = (function() {
 	function getTextManifest (callback) {
 
 		// check for offline use
-		if (!sofia.config.enableOnlineSources || !sofia.config.enableAmericanBibleSociety || sofia.config.absUrl == '') {
+		if (!sofia.config.enableOnlineSources || !sofia.config.enableAmericanBibleSociety || sofia.config.baseAPIUrl == '') {
 			callback(null);
 			return;
 		}
@@ -50,7 +50,7 @@ sofia.textproviders['abs'] = (function() {
 			text_data_is_loading = true;
 
 			$.ajax({
-				url: sofia.config.absUrl,
+				url: sofia.config.baseAPIUrl + "bible/partners/abs",
 				dataType: 'jsonp',
 				beforeSend:  function(xhr){
 					if (xhr.overrideMimeType) {
@@ -128,7 +128,7 @@ sofia.textproviders['abs'] = (function() {
 		if (typeof info.divisions == 'undefined' || info.divisions.length == 0) {
 
 			$.ajax({
-				url: sofia.config.absUrl,
+				url: sofia.config.baseAPIUrl + "bible/partners/abs",
 				dataType: 'jsonp',
 				beforeSend:  function(xhr){
 					if (xhr.overrideMimeType) {
@@ -190,7 +190,7 @@ sofia.textproviders['abs'] = (function() {
 			nextid = sectionIndex < textinfo.sections.length ? textinfo.sections[sectionIndex+1] : null;
 
 		$.ajax({
-			url: sofia.config.absUrl,
+			url: sofia.config.baseAPIUrl + "bible/partners/abs",
 			dataType: 'jsonp',
 			beforeSend:  function(xhr){
 				if (xhr.overrideMimeType) {
@@ -254,7 +254,7 @@ sofia.textproviders['abs'] = (function() {
 			};
 
 		$.ajax({
-			url: sofia.config.absUrl,
+			url: sofia.config.baseAPIUrl + "bible/partners/abs",
 			dataType: 'jsonp',
 			beforeSend:  function(xhr){
 				if (xhr.overrideMimeType) {

@@ -30,7 +30,7 @@ var StatisticsWindow = function(id, parent, data) {
 	} else {
 
 		$.ajax({
-			url: 'js/lib/wordcloud2.js',
+			url: sofia.config.baseContentUrl + 'build/wordcloud2.js',
 			dataType: "script",
 			success:  function() {
 				isReady = true;

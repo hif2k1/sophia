@@ -1,5 +1,5 @@
 sofia.config = $.extend(sofia.config, {
-
+    flagIcons: 'build/icons-flags.svg',
 	enableBibleSelectorTabs: false,
 	bibleSelectorDefaultList: ['ENGNAS', 'ENGNIV']
 
@@ -423,8 +423,16 @@ var TextChooser = function() {
 									mode == 'languages' ? 'collapsed' : ''
 							)
 						);
+					} else if (text_type == 'commentary' ) {
+                        langHtml.push(
+                            createTextRow(
+                                text,
+                                isDefaultText,
+                                mode == 'languages' ? 'collapsed' : ''
+                            )
+                        );
 
-					}
+                    }
 				}
 
 				if (text_type == 'bible' && (mode == 'none' || mode == 'languages' || (hasDefaultText && mode == 'default')) ) {
@@ -487,7 +495,7 @@ var TextChooser = function() {
 				if (textsInCountry.length > 0) {
 					html.push(
 						createHeaderRow(countryInfo["alpha-3"],
-							'<svg class="icon flag"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.icons + '#' + countryInfo["alpha-2"].toUpperCase() + '"></use></svg>' + countryInfo.name,
+							'<svg class="icon flag"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + sofia.config.flagIcons + '#' + countryInfo["alpha-2"].toUpperCase() + '"></use></svg>' + countryInfo.name,
 							'',
 							'',
 							'country collapsed')

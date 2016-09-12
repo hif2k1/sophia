@@ -6,10 +6,7 @@
 	<link href="build/images/favicon.png" rel="icon" />
 	<title>Bible - Windows</title>
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="initial-scale=1.0">
-	<meta name="viewport" content="maximum-scale=1.0">
-	<meta name="viewport" content="user-scalable=no">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
 	<link rel="stylesheet" href="build/app.css?v=4.0.1" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="build/app.js?v=4.0.1"></script>
@@ -23,18 +20,17 @@
 				{type: 'bible', data: {textid: 'ENGKJV', fragmentid: 'JN3_16'}},
 				{type: 'bible', data: {textid: 'ENGNAS', fragmentid: 'JN3_16'}}
 			],
+			newCommentaryWindowTextId: "comm_eng_tske",
 
 			enableBibleSelectorTabs: false,
 			textsIndexPath: 'dbs_texts.json',
 			baseContentUrl: 'http://inscript.bible.cloud/',
-			baseAPIUrl: 'http://api.bible.cloud/api/',
-			serverSearchPath: 'http://api.bible.cloud/api/bible/study/search/',
-			absUrl: 'http://api.bible.cloud/api/bible/partners/abs/',
+			baseAPIUrl: 'https://bible.cloud/api/',
+			dbpBaseUrl: 'http://biblecloud.dev/api/bible/partners/fcbh/handshake/',
+			serverSearchPath: 'http://biblecloud.dev/api/bible/search/',
 			enableOnlineSources: true,
 			enableFeedback: true,
-			feedbackUrl: 'http://api.bible.cloud/feedback/',
-
-			newCommentaryWindowTextId: "comm_eng_tske",
+			feedbackUrl: 'http://biblecloud.dev/feedback/',
 			fcbhKey: '111a125057abd2f8931f6d6ad9f2921f',
 			jfmKey: '52b06248a3c6e8.12980089',
 			gaKey: 'UA-3734687-19',
@@ -48,6 +44,14 @@
 	<style>
 	#app-logo { line-height:60px; color:#FFF;text-decoration:none; font-size:x-large;}
 	</style>
+
+	<!-- Fallback -->
+	<noscript><meta http-equiv="refresh" content="1; url=https://bible.cloud/reader/"></noscript>
+	<!--[if lte IE 8]>
+	<meta http-equiv="refresh" content="1; url=https://bible.cloud/reader/">
+	<![endif]-->
+
+
 </head>
 <body>
 	<div id="startup">
