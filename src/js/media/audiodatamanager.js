@@ -523,7 +523,7 @@ var FaithComesByHearingAudio = (function() {
 		}
 
 		var
-			url = sofia.config.dbpBaseUrl + '/audio/path?v=2&reply=jsonp&dam_id=' + dam_id + '&book_id=' + bookInfo.osis.toLowerCase() + '&chapter_id=' + chapterNum.toString() + '&key=' + sofia.config.fcbhKey;
+			url = sofia.config.dbpBaseUrl + 'audio/path?v=2&reply=jsonp&dam_id=' + dam_id + '&book_id=' + bookInfo.osis.toLowerCase() + '&chapter_id=' + chapterNum.toString() + '&key=' + sofia.config.fcbhKey;
 
 		$.ajax({
 			dataType: 'jsonp',
