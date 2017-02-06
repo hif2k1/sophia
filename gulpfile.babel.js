@@ -76,7 +76,10 @@ function javascript() {
 function server(done) {
     browser.init({
         injectChanges: true,
-        proxy: "http://sophia.dev/"
+        open: false,
+        server: true,
+        host: "130.211.48.134:",
+        //proxy: "http://sophia.dev/"
     });
     done();
 }

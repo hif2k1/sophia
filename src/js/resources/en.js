@@ -119,6 +119,9 @@ sofia.resources['en'] = {
 			"stats": {
 				"label": "Statistics",
 				"frequentwords":"Frequent Words"
+			},
+			"timeline": {
+				"label": "Timeline"
 			}
 		},
 		"names": {
