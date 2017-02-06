@@ -1,0 +1,242 @@
+#timeline {
+    position: relative;
+}
+
+.timelineDiv {
+    position: relative;
+    overflow-x: scroll;
+    height:inherit;
+}
+
+.controlDiv {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    z-index: 100;
+}
+
+.zoom {
+    margin: 2px;
+    font-weight: bold;
+    font-style:italic;
+}
+
+.explainDiv {
+    position: absolute;
+    top: -205px;
+    height: 200px;
+    overflow: auto;
+    width: 200px;
+    left: -150px;
+    background-color: #bfbfbf;
+    border: 10px solid #bfbfbf;
+    border-radius: 10px;
+    display:none;
+}
+
+.timelineInfoBox {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    z-index: 100;
+    font-weight: bold;
+    background-color: #FBB;
+    border-radius: 5px;
+    padding:3px;
+    display: none;
+}
+
+.timelineRow {
+    position: absolute;
+}
+
+.eventCollection {
+    position: absolute;
+}
+    
+.eventCollection:hover .timelineMarker, .eventCollection.selectedEvent .timelineMarker{
+    display:block;
+    z-index:3;
+}
+
+.eventCollection .timelineMarker {
+    position:relative;
+    margin-top:30px;
+    margin-bottom:-10px;
+    display:none;
+}
+
+.timelineMarker {
+    position: absolute;
+    width: 5px;
+    min-height: 10px;
+    border-color:#d80027;
+    background-color: #f7efc3;
+    border-radius: 5px;
+}
+
+.timelineMarker.kingIsraelMarker {
+    border-color: #3333CC;
+}
+
+.timelineMarker.prophetMarker {
+    border-color: #ff9966;
+}
+
+.timelineMarker.kingUnitedMarker, .timelineMarker.judgeMarker {
+    border-color: #cc66ff;
+}
+
+.timelineMarker svg {
+    display: none;
+}
+
+.timelineMarker:hover, .timelineMarker.selectedEvent{
+    z-index: 12;
+}
+
+.timelineMarker.emphasis svg, .timelineMarker:hover svg, .timelineMarker.selectedEvent svg, .eventCollection svg{
+    display:block;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    padding: 2px;
+    background-color: #f7efc3;
+    position:absolute;
+    left:-15px;
+}
+
+.timelineMarker .eventLabel {
+    display: none;
+    position: absolute;
+    padding: 2px;
+    padding-left:15px;
+    padding-right:5px;
+    border-radius: 5px;
+    background-color: #bfbfbf;
+    white-space: nowrap;
+}
+
+.timelineMarker .eventLifeline {
+    display: none;
+    position: absolute;
+    top: 15px;
+    border-top: solid 7px;
+    border-bottom: solid 8px;
+    border-radius: 5px;
+    border-color: inherit;
+}
+
+.timelineMarker:hover .eventLifeline, .timelineMarker:hover .eventLabel, .timelineMarker.selectedEvent .eventLabel, .timelineMarker.selectedEvent .eventLifeline{
+    display: block;
+}
+
+.eventCollection .timelineMarker .eventLabel, .eventCollection .timelineMarker .eventLifeline {
+    display: block;
+}
+
+.eraMarker {
+    position: absolute;
+    top: -10px;
+    height: 146px;
+    background-color: #f7efc3;
+    background: linear-gradient(to right, #f7efc3, #f7efc3, #f7efc3, white);
+}
+
+.eraMarker .eventLabel {
+    position: absolute;
+    top: -20px;
+    width:100%;
+    overflow: hidden;
+    color: #f7efc3;
+    font-weight: bold;
+    font-size: 22px;
+    background: white;
+    height:20px;
+}
+
+.bookMarker{
+    border-radius: 5px;
+    position: absolute;
+    height: 20px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bookMarker:hover, .bookMarker.selectedEvent{
+    overflow: visible;
+}
+
+.bookMarker:hover .bookMarkerLabel, .bookMarker.selectedEvent{
+    font-weight: bold;
+    z-index: 10;
+}
+
+.bookMarkerLabel {
+    position: absolute;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: bottom;
+    position: absolute;
+    border-radius: 5px;
+    color:black;
+    font-size: 18px;
+    height: 100%;
+    white-space: nowrap;
+    background-color: inherit;
+}
+
+.bookMarker, .timelineMarker {
+    cursor: pointer;
+}
+
+.gospelBookMarker {
+	background-color: #FBB;
+}
+.poetBookMarker {
+	background-color: #FBF;
+}
+
+.majorpBookMarker {
+	background-color: #FBB;
+}
+
+.histBookMarker {
+	background-color: #BBF;
+}
+
+.pentaBookMarker {
+	background-color: #BFB;
+}
+
+.actsBookMarker {
+	background-color: #F4B;
+}
+
+.paulBookMarker {
+	background-color: #BBF;
+}
+
+.generalBookMarker {
+	background-color: #BFF;
+}
+
+.minorpBookMarker {
+	background-color: #FFB;
+}
+
+.revBookMarker {
+	background-color: #FBF;
+}
+
+.generalBookMarker {
+    background-color: #BFF;
+}
+
+.paulBookMarker {
+    background-color: #BBF;
+}
+
+.revBookMarker {
+    background-color: #FBF;
+}
