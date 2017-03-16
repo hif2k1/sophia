@@ -122,6 +122,9 @@ sofia.resources['en'] = {
 			},
 			"timeline": {
 				"label": "Timeline"
+			},
+			"social": {
+				"label": "Social Media"
 			}
 		},
 		"names": {

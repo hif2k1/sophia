@@ -1,0 +1,66 @@
+.socialMediaMenu {
+    height:54px;
+}
+
+.socialMediaOption {
+    height:50px;
+    width:50%;
+    float:left;
+    opacity: 0.3;
+}
+
+.socialMediaOption.selected, .socialMediaOption:hover {
+    opacity: 1;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00aced;
+}
+
+.socialMediaMenu svg {
+    height:44px;
+    width:100%;
+    margin-top: 3px;
+}
+
+.twitterCommentsDiv {
+    overflow-y: auto;
+}
+
+.tweetForm {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textOfTweet {
+    width:100%;
+    height:100px;
+}
+
+.sendTweetButton {
+    cursor: pointer;
+    font-weight: bold;
+    color:white;
+    background-color: #00aced;
+    border-radius: 5px;
+    padding:5px;
+    display: inline-block;
+    float: right;
+}
+
+.clearDiv {
+    clear:both;
+}
+
+.loadingMessage {
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:100px;
+    max-width: 500px;
+    text-align: center;
+}

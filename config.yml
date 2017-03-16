@@ -110,6 +110,7 @@ PATHS:
   - "src/js/windows/statisticswindow.js"
   - "src/js/windows/deafbiblewindow.js"
   - "src/js/windows/timelinewindow.js"
+  - "src/js/windows/social.js"
 
   ### Menu js files
   - "src/js/menu/mainmenu.js"
